@@ -1,0 +1,391 @@
+{% extends 'App_core/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative text-center text-lg-left" data-aos="zoom-in" data-aos-delay="100">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h1>Bienvenido a <span>EL RECETARIO</span></h1>
+          <h2>Descubre recetas de todo el mundo</h2>
+
+          <div class="btns">
+            <a href="{% url 'recetas' %}" class="btn-menu animated fadeInUp scrollto">Recetas</a>
+            <a href="#top" class="btn-book animated fadeInUp scrollto">Top de la semana</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+            <div class="about-img">
+              <img src="{% static 'App_core/img/comidas-raras-mundo.jpg' %}" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>La mejor comunidad de gastronomía</h3>
+            <p>
+              Aqui encontraras desde recetas caseras, hasta platos gourmet de alto nivel
+            </p>
+            <ul>
+              <li><i class="icofont-check-circled"></i>Recetas nuevas todos los días</li>
+              <li><i class="icofont-check-circled"></i>Blogs sobre temas de interés gastronomico</li>
+              <li><i class="icofont-check-circled"></i>La mejor comunidad</li>
+            </ul>
+            <p>
+              Registrate gratis en 'EL RECETARIO' y descubriras un mundo de nuevos sabores.
+              Podrás compartir tus propias recetas, comentar y puntuar las recetas de la comunidad 
+            </p>
+
+            <a href="{% url 'registro' %}"><button class="boton-global">Registro</button></a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>recetas</h2>
+          <p>¿Que recetas estas buscando?</p>
+        </div>
+
+        <div class="row col-lg-8 mx-auto">
+          
+          <div class="col-lg-6">
+            <a href="{% url 'recetas' %}">
+              <div class="box text-center" data-aos="zoom-in" data-aos-delay="100">
+                <img src="{% static 'App_core/img/specials-3.png' %}" alt="" class="col-lg-12">
+                <span>CASERO</span>
+                <p>Lo mejor de la comida de hogar</p>
+              </div>
+            </a>           
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <a href="{% url 'recetas' %}">
+              <div class="box text-center" data-aos="zoom-in" data-aos-delay="200">
+                <img src="{% static 'App_core/img/specials-4.png' %}" alt="" class="col-lg-12">
+                <span>GOURMET</span>
+                <p>Los platos mas impresionantes</p>
+              </div>
+            </a>           
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    
+
+    <!-- ======= Specials Section ======= -->
+    <section id="specials" class="specials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Recetas</h2>
+          <p>Descubre lo mejor de cada continente </p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-toggle="tab" href="#tab-1">Africa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-2">América</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-3">Asia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-4">Europa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-5">Oceanía</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              
+              <div class="tab-pane active show" id="tab-1">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Recetas de Africa</h3>
+                    <p class="font-italic">Platillos con historia que dejan 
+                      en evidencia una gran cultura gastronomica</p>
+                    <p>La gastronomía africana es una experiencia de sabor que mezcla 
+                      los colores del continente, los sabores de las especias de  la naturaleza 
+                      y los sabores de las tradiciones de los pueblos.</p>
+                    <a href="{% url 'recetas' %}"><button class="boton-global">ver mas</button></a>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'App_core/img/specials-1.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="tab-2">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Recetas de América</h3>
+                    <p class="font-italic">Sinónimo de diversidad y miles de años de tradición.</p>
+                    <p>El continente americano tiene una enorme diversidad gastronomica, impulsada 
+                      por paises con estilos de cocina unicos, tales como México, Perú, Colombia, 
+                      Brasil, entre otros.</p>
+                    <a href="{% url 'recetas' %}"><button class="boton-global">ver mas</button></a>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'App_core/img/specials-2.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="tab-3">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Recetas de Asia</h3>
+                    <p class="font-italic">Sabores espectaculares pero a la vez saludables</p>
+                    <p>La cocina asiática es una cocina tradicional con mucha historia y de exóticos
+                       ingredientes que dan sabores (y aspectos) únicos a sus platos. Puesto que la
+                        mayoría de países asiáticos han tenido a lo largo de los siglos una población
+                        dominantemente rural, ha hecho que la mayoría de recetas de comida asiática
+                         utilicen alimentos de temporada y de cultivo local.</p>
+                    <a href="{% url 'recetas' %}"><button class="boton-global">ver mas</button></a>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'App_core/img/specials-3.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="tab-4">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Recetas de Europa</h3>
+                    <p class="font-italic">La comida mediterranea, el plato fuerte de Europa</p>
+                    <p>La comida europea consta de una gran variedad de recetas. Un mismo plato tiene 
+                      su versión en otro país e incluso de una región a otra. Y aunque en los últimos 
+                      años se ha olvidado la cocina internacional europea en favor del exotismo de 
+                      otras gastronomías, ésta cuenta también con platos con su toque exótico.</p>
+                      <a href="{% url 'recetas' %}"><button class="boton-global">ver mas</button></a>
+                    </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'App_core/img/specials-4.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="tab-5">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Recetas de Oceanía</h3>
+                    <p class="font-italic">Una gastronomía resultado de la fusión de orígenes culinarios tanto de Asia como de Occidente.</p>
+                    <p>La cocina tradicional es una mezcla de las gastronomías de la Polinesia, Melanesia, India,
+                      China y Occidente. Los principales ingredientes que se usan son el coco, el pescado, el arroz, 
+                      el boniato, el malanga, el yuca y el pan.</p>
+                    <a href="{% url 'recetas' %}"><button class="boton-global">ver mas</button></a>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'App_core/img/specials-5.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Specials Section -->
+
+    <!-- ======= Recipes Section ======= -->
+    <section id="top" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Recetas</h2>
+          <p>las recetas mejor evaluadas de la semana</p>
+        </div>
+
+        <div class="owl-carousel testimonials-carousel" data-aos="zoom-in" data-aos-delay="100">
+
+          <div class="testimonial-item">
+
+            <img src="{% static 'App_core/img/specials-5.png' %}" alt="">
+
+            <h2 class="text-center mb-4">Titulo Receta</h2>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Quedaras fascinado con esta receta, sus sabores y texturas estan a otro nivel.
+                Si te gustan los toques agridulces, esta es tu receta!
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+
+            <div class="d-flex img-name">
+              <img src="{% static 'App_core/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+              <h3>Nombre usuario</h3>
+            </div>
+            
+
+            <div class="btns">
+              <a href="{% url 'recetas' %}"><button class="boton-global">ver mas</button></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Recipes Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="events" class="events">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Blog</h2>
+          <p>Temas de interés</p>
+        </div>
+
+        <div class="owl-carousel events-carousel" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="row event-item ">
+            <div class="col-lg-6">
+              <img src="{% static 'App_core/img/quesos.jpg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content">
+              <h3>Variedades de quesos</h3>
+              <div class="price"></div>
+              <p class="font-italic">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua.
+              </p>
+              
+              <p>
+                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua.
+              </p>
+
+              <a href=""><button class="boton-global">ver mas</button></a>
+
+            </div>
+          </div>
+
+          <div class="row event-item">
+            <div class="col-lg-6">
+              <img src="{% static 'App_core/img/vinos.jpg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content">
+              <h3>Variedades de quesos</h3>
+              <div class="price"></div>
+              <p class="font-italic">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua.
+              </p>
+              
+              <p>
+                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua.
+              </p>
+
+              <a href=""><button class="boton-global">ver mas</button></a>
+            </div>
+          </div>
+
+          <div class="row event-item">
+            <div class="col-lg-6">
+              <img src="{% static 'App_core/img/molecular.jpg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content">
+              <h3>Variedades de quesos</h3>
+              <div class="price"></div>
+              <p class="font-italic">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua.
+              </p>
+              
+              <p>
+                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua.
+              </p>
+
+              <a href=""><button class="boton-global">ver mas</button></a>
+            </div>
+          </div>
+        </div>
+
+        <a href=""><button class="boton-global row mt-5 mx-auto">Blogs</button></a>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contacto</h2>
+          <p>Envía tus sugerencias</p>
+        </div>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="row mt-2">
+
+          <div class="col-lg-12 mt-2 mt-lg-0">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="8" data-rule="required" data-msg="Please write something for us" placeholder="Mensaje"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+{% endblock %}
+  
