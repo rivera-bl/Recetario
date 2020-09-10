@@ -1926,11 +1926,11 @@ section {
 .recetas-usuario{
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 32%);
+  grid-template-columns: repeat(3, 35%);
   justify-content: center!important;
   align-content: center!important;
-  row-gap: 1rem;
-  column-gap: 1rem;
+  row-gap: 0.2rem;
+  column-gap: 0.2rem;
 }
 
 .receta-usuario{
@@ -1938,12 +1938,11 @@ section {
   transition: all .2s ease-in-out;
 }
 .receta-usuario:hover{
-  transform: scale(1.03);
+  filter: grayscale(50%);
 }
 
 .receta-usuario img{
   width: 100%!important;
-  border: solid 2px #cda45e;
 }
 
 .receta-usuario h2{
@@ -2234,9 +2233,6 @@ section {
     display: flex;
     flex-direction: column;
   }
-
-  
-
   /*=============================================*/
   
   .principal{
@@ -2245,3 +2241,76 @@ section {
 }
 
 
+/*Agregar receta*/
+.tit{
+  display: flex;
+  align-items: center;
+}
+
+.tit i{
+  font-size: 3rem;
+  border-right: 1px solid white;
+  padding: 0 1rem 0 0;
+  margin-right: 1rem;
+}
+.cont-agregar-receta{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.agregar-receta i{
+  color: #cda45e;
+  font-size: 4rem;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.agregar-receta i:hover{
+  color: #d6b883;
+  transform: scale(1.05);
+}
+
+/*formulario nueva receta*/
+.form-nueva-receta input{
+  display: block;
+}
+.form-nueva-receta input[type="text"], textarea{
+  background-color: transparent;
+  border: 1px solid #cab289;
+  width: 100%;
+  padding: 0.5rem;
+  color: #cab289;
+}
+
+.form-nueva-receta input[type="button"], input[type="submit"]{
+  background-color: transparent;
+  border: 1px solid #cab289;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  color: white;
+  transition: all .2s ease-in-out;
+}
+
+.form-nueva-receta input[type="button"]:hover{
+  background-color: #cab289;
+}
+
+.icon-borrar{
+  background-color: transparent;
+  border: none;
+}
+
+.icon-borrar i{
+  color: #cab289;
+}
+
+/*========================
+  ==== MENSAJE ERROR ====
+  ========================*/
+.error-msg{
+  color: red!important;
+  font-size: 0.9rem!important;
+  font-family: "Poppins", sans-serif!important;
+  font-weight: 100!important;
+}

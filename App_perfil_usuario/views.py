@@ -6,3 +6,9 @@ class PerfilPageView(TemplateView):
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name, {'title':'Perfil'})
+
+class NuevaRecetaPageView(TemplateView):
+    template_name = "App_perfil_usuario/nueva-receta.html"
+
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name, {'title':'Nueva Receta'})
